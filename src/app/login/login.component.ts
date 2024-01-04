@@ -30,25 +30,18 @@ export class LoginComponent implements OnInit {
       if (data.filter((data: { email: String; }) => data.email == this.usuario.email)[0] &&
         data.filter((data: { password: String; }) => data.password == this.usuario.password)[0]) {
         localStorage.setItem('token',this.uuid())
-
         let idData = data.filter((data: { email: String; }) => data.email == this.usuario.email)[0]
-        let tokens = localStorage.getItem('token')
-       
-
+        let tokens = localStorage.getItem('token') 
           const id = idData.id; 
           idData.token = tokens
-          
-      
           this.service.putUser(id, idData).subscribe(
             response => {               
-              console.log('Dados atualizados com sucesso:', response);
+              
             },
             error => {
               console.error('Erro ao atualizar dados:', error);
             }
           );
-        
-
         this.router.navigate(['/home']);
       } else {
         console.log("invalido");
