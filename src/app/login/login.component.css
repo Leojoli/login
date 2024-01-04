@@ -1,0 +1,11 @@
+.containers{
+    width: 50vw;
+    height: 50vh;
+    margin: auto;
+    padding: auto;
+    margin-top: 50px;
+}
+
+hr{
+    margin-bottom: 50px;
+}
