@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
           idData.token = tokens
           this.service.putUser(id, idData).subscribe(
             response => {               
-              
+              console.log('Dados atualizados com sucesso');
             },
             error => {
               console.error('Erro ao atualizar dados:', error);

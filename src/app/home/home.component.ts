@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../login/auth.service';
+import { UserService } from '../services/users.services';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,19 +9,19 @@ import { AuthService } from '../login/auth.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-mostrarMenu: boolean = false;
 
-constructor(private authService: AuthService){
-  
-}
+constructor(private router: Router, private service: UserService) {
+ this.showPage()
+ }
 
-ngOnIntit(){
-  console.log(this.mostrarMenu)
-  this.authService.mostrarMenuEmitter.subscribe(
-    
-    mostrar => this.mostrarMenu = mostrar
-  );
-}
-
+  showPage(){
+    this.service.getUser().subscribe(data => {
+      let searchToken = data.filter((data: { token: String; }) => data.token == localStorage.getItem('token')).length
+      if (searchToken == 0) {
+       console.log(data.filter((data: { token: String; }) => data.token == localStorage.getItem('token')));
+       this.router.navigate(['/login']);
+  } 
+  })
+  }
 
 }
