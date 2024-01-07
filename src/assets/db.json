@@ -4,19 +4,19 @@
       "id": 1,
       "email": "user_01@email.com",
       "password": "admim1234",
-      "token": "499351c6-457e-6850-b4ac-c832d5befe28"
+      "token": "ff9608aa-cfc6-6d47-8667-a962edef3a79"
     },
     {
       "id": 2,
       "email": "user_02@email.com",
       "password": "admim1234",
-      "token": "token_2"
+      "token": "5460aa6f-8e37-615a-b7e7-75b958f73d23"
     },
     {
       "id": 3,
       "email": "user_03@email.com",
       "password": "admim1234",
-      "token": "token_3"
+      "token": "feef233a-fcbc-6eba-9cbc-303e36121c24"
     }
   ]
 }

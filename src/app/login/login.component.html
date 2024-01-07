@@ -1,26 +1,61 @@
-
-
-<div class="containers">
-    <h5><strong>Conecte-se</strong></h5>
-    <hr>
-  <div class="row">
-    <div class="input-field col s12">
-      <input [(ngModel)]="usuario.email" id="email" type="email" class="validate">
-      <label for="email">Email</label>
+<div class="container-login">
+    <div class="img-box">
+        <img src="/assets/login_wallpaper.svg">
     </div>
-  </div>
+    <div class="content-box">
+        <div class="form-box">
+            <div class="login">
+                <span><strong>Olá</strong>, tudo bem?</span>
+            </div>
+            <form >
+                <div class="input-box">
+                    <span>Username</span>
+                    <div class="validate icon_user">
+                        <img src="/assets/icon_user.svg" alt="" class="icon">
+                        <input [(ngModel)]="users.email" name="email" id="email" type="email" placeholder="Your e-mail" autocomplete="off" />
+                    </div>
+                    <span class="invalid">E-mail Invalido</span>
+                </div>
 
-  <div class="row">
-    <div class="input-field col s12">
-      <input [(ngModel)]="usuario.password" id="password" type="password" class="validate">
-      <label for="password">Password</label>
+                <div class="input-box">
+                    <span>Password</span>
+                   <div class="validate icon_pass">
+                    <img src="/assets/icon_pass.svg" alt="" class="icon">
+                    <input [(ngModel)]="users.password" name="password" id="password" type="password" placeholder="Your password" autocomplete="off" />
+                   </div>
+                    <span class="invalid">Senha invalida</span>
+                </div>
+
+                <div class="remember">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#">Esqueceu a Senha?</a>
+                </div>
+
+                <div class="input-box">
+
+                    <button class="btn waves-effect waves-light" type="submit" name="action" (click)="fazerLogin()">
+                        <img src="/assets/astronauta.png" alt="" class="img_icon_btn">
+                        <strong>Login</strong>
+                    </button>
+                </div>
+
+                <div class="input-box">
+                    <p>Não Tem Uma Conta? <a href="#">Inscrever-se</a></p>
+                </div>
+            </form>
+            <div class="others_login">
+                <span><strong>Login</strong> with Others</span>
+            </div>
+            <ul class="ul">
+                <li><img src="/assets/icon_google.svg">
+                    <span>Login with <strong>google</strong></span>
+                </li>
+                <li><img src="/assets/icon_hotmail.png">
+                    <span>Login with <strong>hotmail</strong></span>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
-  <button 
-    class="btn waves-effect waves-light" 
-    type="submit" 
-    name="action"
-    (click)="fazerLogin()">
-    Login
-  </button>
 </div>

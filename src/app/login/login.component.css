@@ -1,11 +1,325 @@
-.containers{
-    width: 50vw;
-    height: 50vh;
-    margin: auto;
-    padding: auto;
-    margin-top: 50px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-hr{
-    margin-bottom: 50px;
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+.container-login {
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    display: flex;
+}
+
+.img-box {
+    width: 70%;
+    height: 100%;
+    padding: 20px;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+}
+
+.content-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:  #fdf9ff;
+    width: 40%;
+    height: 100%;
+}
+
+.content-box .form-box {
+    width: 80%;    
+}
+
+.content-box .form-box .ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.content-box .form-box .ul li {
+    list-style: none;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 7px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.content-box .form-box .ul li:hover {
+    background: #e4e4e4;
+}
+
+.form-box .ul li img {
+    width: 30px;
+    margin: 5px;
+}
+
+.content-box .form-box h2 {
+    color: #230044;
+    font-weight: 600;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.content-box .form-box .input-box {
+    margin-bottom: 20px;
+}
+
+.content-box .form-box .input-box input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-weight: 400;
+    border: none;
+    font-size: 17px;
+    color: #230044;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.content-box .form-box .input-box span {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #230044;
+    font-weight: 400;
+}
+
+.content-box .form-box .input-box .invalid {
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    display: none;
+    color: #de0000;
+    font-weight: 400;
+}
+.icon_user{
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.icon_pass{
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+.icon {
+    padding: 5px;
+    margin-left: 15px;
+    min-width: 25px;
+    text-align: center;    
+  }
+
+.content-box .form-box .input-box input::placeholder {
+    color: #a9adb6;
+}
+
+.content-box .form-box .input-box button {
+    background: #8744cd;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+    border-radius: 10px;
+    
+}
+.content-box .form-box .input-box .btn strong{
+    margin-left: 100px;
+}
+.content-box .form-box .input-box .btn:hover {
+    background: #230044;    
+    color: #a9adb6;
+}
+.img_icon_btn{
+    width: 25px;
+    height: 25px;
+    margin-left: 40px;
+}
+
+.content-box .form-box .remember{
+    margin-bottom: 20px;
+    color: #4746A2;
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-box .form-box .remember a{
+    text-decoration: none;
+    color: #230044;
+}
+.content-box .form-box .remember a:hover{
+    color: #230044;
+}
+
+.content-box .form-box .input-box p {
+    color: #32324f;
+}
+.content-box .form-box .input-box p a{
+    color: #230044;
+}
+
+.content-box .form-box .input-box p a:hover{
+    color: #230044;
+}
+.login{
+    color: #607d8b;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+    font-size: 28px;
+}
+.login strong{
+    color: #230044;
+}
+
+.content-box .form-box .others_login{
+    color: #343c40;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+    font-size: 18px;
+}
+
+.content-box .form-box .others_login strong{
+    color: #230044;
+}
+
+@media (max-width:868px) {
+    .container-login{
+        margin: auto;
+        padding: auto;
+    }
+    .content-box .form-box .input-box .btn strong{
+        margin-left: 150px;
+    }
+    .img_icon_btn{
+        width: 25px;
+        height: 25px;
+        margin-left: 60px;
+    }
+    .container-login .img-box{
+        display: none;
+    }
+    .container-login .content-box{
+        width: 100%;
+    }
+    .container-login .content-box .form-box{
+        width: 100%;
+        padding: 40px;
+        background: white;
+        margin: 50px;
+    } 
+    .container-login .content-box .form-box h3{
+        margin: 30px 0 10px;
+    } 
+}
+
+@media (max-width:640px) {
+    .container-login{
+        margin: auto;
+        padding: auto;
+    }
+    .content-box .form-box .input-box .btn strong{
+        margin-left: 80px;
+    }
+    .img_icon_btn{
+        width: 25px;
+        height: 25px;
+        margin-left: 30px;
+    }
+    .container-login .content-box .form-box .remember{
+        flex-wrap: wrap;
+    }
+    .container-login .content-box .form-box .remember a{
+        margin-top: 20px;
+    }
+    
+}
+
+@media (max-width:450px) {
+    .container-login{
+        margin: auto;
+        padding: auto;
+    }
+    .content-box .form-box .input-box .btn strong{
+        margin-left: 40px;
+    }
+    .img_icon_btn{
+        width: 25px;
+        height: 25px;
+        margin-left: 20px;
+    }
+    .container-login .content-box .form-box .remember{
+        flex-wrap: wrap;
+    }
+    .container-login .content-box .form-box .remember a{
+        margin-top: 20px;
+    }
+    
+}
+
+@media (max-width:375px) {
+    .container-login{
+        margin: auto;
+        padding: auto;
+        width: 100%;
+        
+    }
+    .content-box .form-box .input-box .btn strong{
+        margin-left: 20px;
+    }
+    .img_icon_btn{
+        width: 25px;
+        height: 25px;
+        margin-left: 20px;
+    }
+    .content-box{        
+        width: 110%;
+    }
+    .container-login .content-box .form-box .remember{
+        flex-wrap: wrap;
+    }
+    .container-login .content-box .form-box .remember a{
+        margin-top: 20px;
+    }
+    
 }
