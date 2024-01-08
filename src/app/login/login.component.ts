@@ -50,7 +50,6 @@ export class LoginComponent implements OnInit {
   handleLogin(response: any) {
     if (response) {
       const payLoad = this.decodeToken(response.credential)
-      console.log(payLoad);
       this.service.getUser().subscribe(data => {
         let dadosEmail = !data.filter((data: { email: String; }) => data.email == payLoad.email)[0] == true ? "E-mail não econtrado" : data.filter((data: { email: String; }) => data.email == payLoad.email)[0].email
         let dadosPassword = !data.filter((data: { password: String; }) => data.password == payLoad.sub)[0] == true ? "Senha incorreta" : data.filter((data: { password: String; }) => data.password == payLoad.sub)[0].password
