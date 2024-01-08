@@ -2,9 +2,9 @@
   "users": [
     {
       "id": 1,
-      "email": "user_01@email.com",
-      "password": "admim1234",
-      "token": "ff9608aa-cfc6-6d47-8667-a962edef3a79"
+      "email": "leonardo@goon.mobi",
+      "password": "103336117249553028229",
+      "token": "fa685cba-d4b7-64e4-b42e-c4a4c24eef9b"
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "id": 3,
       "email": "user_03@email.com",
       "password": "admim1234",
-      "token": "feef233a-fcbc-6eba-9cbc-303e36121c24"
+      "token": "577deb59-8a67-63b5-90db-d24694dd8b48"
     }
   ]
 }

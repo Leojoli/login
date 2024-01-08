@@ -1,6 +1,6 @@
 <div class="container-login">
     <div class="img-box">
-        <img src="/assets/login_wallpaper.svg">
+        <img src="/assets/login_wallpaper.jpg">
     </div>
     <div class="content-box">
         <div class="form-box">
@@ -12,16 +12,16 @@
                     <span>Username</span>
                     <div class="validate icon_user">
                         <img src="/assets/icon_user.svg" alt="" class="icon">
-                        <input [(ngModel)]="users.email" name="email" id="email" type="email" placeholder="Your e-mail" autocomplete="off" />
+                        <input [(ngModel)]="users.email" name="email" id="email" type="email" placeholder="Your e-mail" autocomplete="on" />
                     </div>
-                    <span class="invalid">E-mail Invalido</span>
+                    <span class="invalid">E-mail não econtrado</span>
                 </div>
 
                 <div class="input-box">
                     <span>Password</span>
                    <div class="validate icon_pass">
                     <img src="/assets/icon_pass.svg" alt="" class="icon">
-                    <input [(ngModel)]="users.password" name="password" id="password" type="password" placeholder="Your password" autocomplete="off" />
+                    <input [(ngModel)]="users.password" name="password" id="password" type="password" placeholder="Your password" autocomplete="on" />
                    </div>
                     <span class="invalid">Senha invalida</span>
                 </div>
@@ -49,13 +49,16 @@
                 <span><strong>Login</strong> with Others</span>
             </div>
             <ul class="ul">
-                <li><img src="/assets/icon_google.svg">
-                    <span>Login with <strong>google</strong></span>
+                <li id="btn_google">
+                    <!-- <img src="/assets/icon_google.svg">
+                    <span>Login with <strong>google</strong></span> -->
                 </li>
-                <li><img src="/assets/icon_hotmail.png">
+                <li id="btn_hotmail">
+                    <img src="/assets/icon_hotmail.png">
                     <span>Login with <strong>hotmail</strong></span>
                 </li>
             </ul>
         </div>
     </div>
 </div>
+

@@ -32,7 +32,8 @@ select:-webkit-autofill:focus {
 
 .img-box img {
     width: 100%;
-    height: 100%;
+    height: 100%;    
+    border-radius: 10% 10% 5% 5% ;
 }
 
 .content-box {
@@ -45,7 +46,7 @@ select:-webkit-autofill:focus {
 }
 
 .content-box .form-box {
-    width: 80%;    
+    width: 90%;    
 }
 
 .content-box .form-box .ul {
@@ -68,9 +69,6 @@ select:-webkit-autofill:focus {
     transition: 0.3s;
 }
 
-.content-box .form-box .ul li:hover {
-    background: #e4e4e4;
-}
 
 .form-box .ul li img {
     width: 30px;
@@ -313,7 +311,7 @@ select:-webkit-autofill:focus {
         margin-left: 20px;
     }
     .content-box{        
-        width: 110%;
+        width: 150%;
     }
     .container-login .content-box .form-box .remember{
         flex-wrap: wrap;
